@@ -1,0 +1,33 @@
+.form-container {
+  background-color: aliceblue;
+  border-radius: 5%;
+  margin: 0 auto;
+  padding: 24px;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%);
+  width: 400px;
+}
+.form-container .form-input {
+  padding: 8px 0;
+}
+.form-container .form-input.password {
+  padding-bottom: 0;
+}
+.form-container .remember-credentials {
+  margin-bottom: 24px;
+}
+
+@media (max-width: 440px) {
+  .form-container {
+    width: 320px;
+  }
+}
+@media (max-width: 380px) {
+  .form-container {
+    width: 240px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
