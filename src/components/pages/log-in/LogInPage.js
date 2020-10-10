@@ -5,8 +5,8 @@ import './style.scss';
 import {FormControlLabel, Checkbox, TextField, Button} from "@material-ui/core";
 
 function LogInPage (){
-    const [errors, setErrors ] = useState({});
-    const [redirect, setRedirect ] = useState(false);
+    const [errors, setErrors] = useState({});
+    const [redirect, setRedirect] = useState(false);
 
     function handleClick(e) {
         e.preventDefault();

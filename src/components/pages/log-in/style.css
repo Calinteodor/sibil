@@ -9,6 +9,9 @@
   transform: translate(-50%);
   width: 400px;
 }
+.form-container .page-title {
+  color: black;
+}
 .form-container .form-input {
   padding: 8px 0;
 }
