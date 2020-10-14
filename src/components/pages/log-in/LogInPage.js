@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import Header from '../../common/header/Header';
 import { Redirect } from 'react-router-dom';
 import './style.scss';
@@ -8,10 +8,21 @@ function LogInPage (){
     const [errors, setErrors] = useState({});
     const [redirect, setRedirect] = useState(false);
 
+    useEffect(() => {
+
+        console.log('didMount');
+        return () => {
+            console.log('willUnmount')
+        }
+    },[redirect, errors]);
+    //useEffect runs by default after every render of the component.
+    //Empty array is added only if the function given to useEffect is run ONCE after the initial render.
+    //If you pass params to the empty array, function(callback) will run every-time the params change.
+
     function handleClick(e) {
         e.preventDefault();
-
         if(!loginIsValid()) return;
+
         setRedirect(true);
     }
 
