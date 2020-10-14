@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import Header from '../../common/header/Header';
+import Header from '../../common/Header';
 import { Redirect } from 'react-router-dom';
 import './style.scss';
 import {FormControlLabel, Checkbox, TextField, Button} from "@material-ui/core";
