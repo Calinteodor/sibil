@@ -1,16 +1,17 @@
 import React from "react";
-import PropTypes from "prop-types";
+import './style.scss';
+import HeaderButtons from '../../common/HeaderButtons'
+import TabBar from '../../common/TabBar'
 
-function Header({name}){
+const Header = () => {
     return (
-        <h1 className="page-title">
-            {name}
-        </h1>
+      <div className="header-container">
+          <h2>LOGO</h2>
+          <TabBar/>
+          <HeaderButtons/>
+      </div>
     )
 }
 
-Header.propTypes = {
-    name: PropTypes.string.isRequired
-};
 
 export default Header;

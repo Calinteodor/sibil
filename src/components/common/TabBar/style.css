@@ -1,0 +1,12 @@
+.tab-list {
+  margin-top: 32px;
+  font-size: 10px;
+  position: relative;
+  right: 25%;
+}
+.tab-list span {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=style.css.map */

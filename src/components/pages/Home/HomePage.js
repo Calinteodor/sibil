@@ -1,12 +1,15 @@
 import React from "react";
-import Header from '../../common/Header';
 import './style.scss';
+import Header from "../../common/Header";
+import Table from "../../common/Table"
 
-function HomePage(){
+const HomePage = () => {
     return (
-        <div>
-            <Header name="Welcome Home"/>
-        </div>
+        <>
+          <Header/>
+          <h3>Manage Players</h3>
+          <Table/>
+        </>
     )
 }
 

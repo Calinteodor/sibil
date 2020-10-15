@@ -1,5 +1,10 @@
-.page-title {
-  color: aliceblue;
+body {
+  background-color: white;
+}
+body h3 {
+  left: 12%;
+  margin-top: 32px;
+  position: relative;
 }
 
 /*# sourceMappingURL=style.css.map */
