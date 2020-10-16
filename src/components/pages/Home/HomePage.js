@@ -1,15 +1,14 @@
 import React from "react";
 import './style.scss';
 import Header from "../../common/Header";
-import Table from "../../common/Table"
+import TabBar from '../../common/TabBar'
 
 const HomePage = () => {
     return (
-        <>
+        <div className="home-page-container">
           <Header/>
-          <h3>Manage Players</h3>
-          <Table/>
-        </>
+          <TabBar/>
+        </div>
     )
 }
 

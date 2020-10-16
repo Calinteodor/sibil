@@ -1,9 +1,8 @@
-body {
+.home-page-container {
   background-color: white;
+  height: 640px;
 
-  h3 {
-    left: 12%;
-    margin-top: 32px;
-    position: relative;
+  .table {
+    margin: 24px;
   }
 }

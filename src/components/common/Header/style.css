@@ -1,10 +1,9 @@
 .header-container {
-  border-bottom: 1px solid black;
   display: flex;
   justify-content: space-between;
 }
 .header-container h2 {
-  margin-left: 16px;
+  margin-left: 24px;
 }
 
 /*# sourceMappingURL=style.css.map */
