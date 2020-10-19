@@ -2,6 +2,10 @@
   background-color: white;
   height: 640px;
 }
+.home-page-container .tab-list {
+  border-bottom: 1px solid;
+  margin: 16px 24px;
+}
 .home-page-container .table {
   margin: 24px;
 }

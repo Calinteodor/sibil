@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, {useState} from "react";
 import { Redirect } from 'react-router-dom';
 import './style.scss';
 import {FormControlLabel, Checkbox, TextField, Button} from "@material-ui/core";
@@ -6,17 +6,6 @@ import {FormControlLabel, Checkbox, TextField, Button} from "@material-ui/core";
 function LogInPage (){
     const [errors, setErrors] = useState({});
     const [redirect, setRedirect] = useState(false);
-
-    useEffect(() => {
-
-        console.log('didMount');
-        return () => {
-            console.log('willUnmount')
-        }
-    },[]);
-    //useEffect runs by default after every render of the component.
-    //Empty array is added only if the function given to useEffect is run ONCE after the initial render.
-    //If you pass params to the empty array, function(callback) will run every-time the params change.
 
     function handleClick(e) {
         e.preventDefault();
@@ -47,7 +36,6 @@ function LogInPage (){
 
     return (
         <>
-            {redirect && <Redirect to='/home' />}
             <div className="form-container">
                 <h1 className="page-title">Log In</h1>
                 <TextField
@@ -81,6 +69,7 @@ function LogInPage (){
                     Submit
                 </Button>
             </div>
+            {redirect && <Redirect to='/home' />}
         </>
     )
 }

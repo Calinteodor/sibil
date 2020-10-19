@@ -1,22 +1,18 @@
 import React from 'react';
-import { Route, Switch } from "react-router-dom";
+import { Redirect, Route, Switch } from "react-router-dom";
 import './App.scss';
 import LogInPage from './components/pages/LogIn';
 import HomePage from './components/pages/Home';
-import ManagePlayersPage from './components/pages/Home/pages/ManagePlayersPage'
-import ManageTeamsPage from './components/pages/Home/pages/ManageTeamsPage'
-import ManageTournamentsPage from './components/pages/Home/pages/ManageTournamentsPage'
 
 function App() {
   return (
     <div>
-        <Switch>
-            <Route exact path="/" component={LogInPage} />
-            <Route path="/home" component={HomePage} />
-            <Route path="/home/players" component={ManagePlayersPage} />
-            <Route path="/home/teams" component={ManageTeamsPage} />
-            <Route path="/home/tournaments" component={ManageTournamentsPage} />
-        </Switch>
+      <Switch>
+        <Redirect exact from="/" to="/login"/>
+        <Route path="/login" component={LogInPage} />
+        <Redirect exact from="/home" to="/home/players"/>
+        <Route path="/home/:page?" component={HomePage} />
+      </Switch>
     </div>
   );
 }
