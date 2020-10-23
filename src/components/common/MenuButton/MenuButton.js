@@ -8,8 +8,14 @@ export default function MenuButton() {
   const [anchorEl, setAnchorEl] = useState(null);
   
   const handleClick = (event) => {
+    event.preventDefault();
+    
     setAnchorEl(event.currentTarget);
   };
+  
+  const handleDelete = () => {}
+  
+  const handleEdit = () => {}
   
   const handleClose = () => {
     setAnchorEl(null);
@@ -27,8 +33,8 @@ export default function MenuButton() {
         open={Boolean(anchorEl)}
         onClose={handleClose}
       >
-        <MenuItem onClick={handleClose}>Edit</MenuItem>
-        <MenuItem onClick={handleClose}>Delete</MenuItem>
+        <MenuItem onClick={handleEdit}>Edit</MenuItem>
+        <MenuItem onClick={handleDelete}>Delete</MenuItem>
       </Menu>
     </div>
   );

@@ -5,6 +5,7 @@ import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import MenuButton from '../../../../../components/common/MenuButton'
+import AddPlayer from '../ManagePlayersPage/pages/AddPlayer';
 
 
 function createData(name, age, team, actions) {
@@ -21,7 +22,8 @@ export default function ManagePlayersPage() {
   
   return (
     <div style={{margin: 24}}>
-      <h3>Manage Players</h3>
+      <h3 style={{float: 'left', margin: 0}}>Manage Players</h3>
+      <AddPlayer/>
       <Table aria-label="caption table">
         <TableHead>
           <TableRow>

@@ -6,13 +6,6 @@ import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import { Redirect } from 'react-router-dom';
 
 const HeaderButtons = () => {
-  const [redirect, setRedirect] = useState(false);
-  
-  function handleLogOut(e) {
-    e.preventDefault();
-    
-    setRedirect(true);
-  }
   const styles = {
     logOutBtn: {
       minWidth: 'unset',
@@ -21,6 +14,14 @@ const HeaderButtons = () => {
     logOutIcon: {
       fontSize: '2rem'
     },
+  }
+  
+  const [redirect, setRedirect] = useState(false);
+  
+  function handleLogOut(e) {
+    e.preventDefault();
+    
+    setRedirect(true);
   }
   
   return (
