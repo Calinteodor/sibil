@@ -6,15 +6,18 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import MenuButton from '../../../../../components/common/MenuButton'
 import AddPlayer from '../ManagePlayersPage/pages/AddPlayer';
-import PropTypes from 'prop-types'
-import {connect} from 'react-redux';
-import * as playerActions from '../../../../../../src/redux/actions/playerActions';
 
+function createData(name, age, team, actions) {
+  return { name, age, team, actions };
+}
 
-export function ManagePlayersPage(props) {
-  React.useEffect(() => {
-    props.dispatch(playerActions.loadPlayers(players))
-  },[players])
+const rows = [
+  createData('Frozen yoghurt', 15, '-', <MenuButton/>),
+  createData('Ice cream sandwich', 27, '-', <MenuButton/>),
+  createData('Eclair', 14, '-', <MenuButton/>),
+];
+
+export default function ManagePlayersPage() {
   
   return (
     <div style={{margin: 24}}>
@@ -30,12 +33,12 @@ export function ManagePlayersPage(props) {
           </TableRow>
         </TableHead>
         <TableBody>
-          {props.players.map(player => (
-            <TableRow key={player.id}>
-              <TableCell align='left'>{player.name}</TableCell>
-              <TableCell align='right'>{player.age}</TableCell>
-              <TableCell align='right'>{player.team}</TableCell>
-              <TableCell align='right'><MenuButton/></TableCell>
+          {rows.map((row) => (
+            <TableRow key={row.name}>
+              <TableCell align='left'>{row.name}</TableCell>
+              <TableCell align='right'>{row.age}</TableCell>
+              <TableCell align='right'>{row.team}</TableCell>
+              <TableCell align='right'>{row.actions}</TableCell>
             </TableRow>
           ))}
         </TableBody>
@@ -43,16 +46,3 @@ export function ManagePlayersPage(props) {
     </div>
   );
 }
-
-ManagePlayersPage.propTypes = {
-  players: PropTypes.array.isRequired,
-  dispatch: PropTypes.func.isRequired
-}
-
-function mapStateToProps(state) {
-  return {
-    players: state.players
-  }
-}
-
-export default connect(mapStateToProps)(ManagePlayersPage);

@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
 const AddPlayer = (props) => {
   const ages = showAge();
   const classes = useStyles();
-  const [player, setState] = useState(
+  const [player, setPlayer] = useState(
     {
       id:null,
       name:'',
@@ -42,9 +42,11 @@ const AddPlayer = (props) => {
   const [open, setOpen] = useState(false);
   
   const handleChange = (e) => {
-    setState({...player,
+    const {name, value } = e.target;
+    
+    setPlayer({...player,
       id: props.players.length,
-      [e.target.name]: e.target.value});
+      [name]: value});
   }
   
   const handleSubmit = (e) => {
@@ -53,6 +55,8 @@ const AddPlayer = (props) => {
     player.name = '';
     player.age = '';
     player.team = '';
+    
+    handleClose();
   }
   
   const handleOpen = () => {
