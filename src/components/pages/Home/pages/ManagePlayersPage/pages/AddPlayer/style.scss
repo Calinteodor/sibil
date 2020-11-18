@@ -1,8 +1,33 @@
-.modal-footer-buttons {
-  margin: 24px 0;
-  float: right;
+.modal-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  .cancel-button {
-    margin-right: 8px;
+  .modal-form {
+    background-color: white;
+    border-radius: 8px;
+
+    h3 {
+      background-color: #3f51b5;
+      border-bottom: 1px solid black;
+      border-radius: 8px 8px 0 0;
+      color: white;
+      margin: 0;
+      padding: 16px 0 16px 16px;
+    }
+
+    .modal-content {
+      padding: 16px;
+    }
+
+    .modal-footer-buttons {
+      margin: 24px 0;
+      padding: 0 16px;
+      float: right;
+
+      .cancel-button {
+        margin-right: 8px;
+      }
+    }
   }
 }
